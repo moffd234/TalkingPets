@@ -9,13 +9,14 @@ public class MainApplication {
         Scanner newScanner = new Scanner(System.in);
         System.out.println("How many pets do you have");
         int numPets = newScanner.nextInt();
-        newScanner.nextLine();
+        newScanner.nextLine(); // Get end of line character
         LinkedHashMap<String, String> pets = new LinkedHashMap<>();
 
 
         for(int i = 0; i < numPets; i++){
             System.out.println("Enter type of pet");
             String petType = newScanner.nextLine();
+
             System.out.println("Enter pet name");
             String petName = newScanner.nextLine();
             pets.put(petType, petName);
