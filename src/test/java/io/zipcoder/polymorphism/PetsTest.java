@@ -30,7 +30,7 @@ public class PetsTest {
 
         String actual = doggo.getName();
 
-        Assert.assertTrue(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     // Test Cats
@@ -49,11 +49,11 @@ public class PetsTest {
 
         String actual = cato.getName();
 
-        Assert.assertTrue(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void testSpeak(){
+    public void testSpeakCat(){
         Cat cat = new Cat("Rex");
         String expected = "Meow";
 
@@ -65,26 +65,26 @@ public class PetsTest {
     // Test Macaw
 
     @Test
-    public void testInheritanceCat(){
+    public void testInheritanceMacaw(){
         Macaw bird = new Macaw("Luke");
 
         Assert.assertTrue(bird instanceof Pet);
     }
 
     @Test
-    public void testConstructorCat(){
+    public void testConstructorMacaw(){
         Macaw bird = new Macaw("Luke");
-        String expected = "Stormageddon";
+        String expected = "Luke";
 
         String actual = bird.getName();
 
-        Assert.assertTrue(expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void testSpeak(){
+    public void testSpeakMacaw(){
         Macaw bird = new Macaw("Luke");
-        String expected = "Meow";
+        String expected = "Squawk";
 
         String actual = bird.speak();
 
